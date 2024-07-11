@@ -1,8 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "org.opencv"
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+
+    packagingOptions {
+        pickFirst '**/*.so'
+    }
+
+    buildFeatures {
+        aidl = true
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId "org.opencv"
