@@ -27,10 +27,12 @@ android {
     packagingOptions {
         pickFirst '**/*.so'
     }
-      buildFeatures {
-    aidl = true
-    buildConfig = true
-}
+
+    buildFeatures {
+        aidl = true
+        buildConfig = true
+    }
+
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
         targetSdkVersion safeExtGet('targetSdkVersion', 28)
